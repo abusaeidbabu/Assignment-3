@@ -1,0 +1,29 @@
+/*function signature/sample */
+function newPrice(currentPrice , discount ) { 
+        if(typeof currentPrice==="number"&&typeof discount==="number"&&discount>0&&discount<=100){
+          let price =currentPrice-(currentPrice*discount)/100;
+          return price.toFixed(3);
+        }
+        else{
+            return "Invalid";
+        }
+}
+/*function signature/sample */
+function validOtp(otp) {
+     if(typeof otp ==="string"){
+        if(otp.startsWith("ph-")){
+            if(otp.length===8){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+        else{
+            return false;
+        }
+     }
+     else{
+        return "Invalid";
+     }
+}
